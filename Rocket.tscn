@@ -1,6 +1,28 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://images/spaceRockets_002.png" type="Texture" id=1]
+[ext_resource path="res://ParticleExample.tscn" type="PackedScene" id=2]
+[ext_resource path="res://anotherparticle.tscn" type="PackedScene" id=3]
+[ext_resource path="res://fire-removebg-preview.png" type="Texture" id=4]
 
 [node name="Rocket" type="Sprite"]
+position = Vector2( -9, 1.00002 )
+rotation = -1.13632
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ParticleExample" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1.00212, 157.01 )
+rotation = 2.98736
+
+[node name="Particle" parent="." instance=ExtResource( 3 )]
+position = Vector2( -4.53565, 170.776 )
+rotation = -0.206712
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 4.82043, 190.214 )
+rotation = 3.01788
+scale = Vector2( 0.167769, 0.210113 )
+texture = ExtResource( 4 )
